@@ -1,17 +1,16 @@
 import React from 'react';
 import ShippingLabelMaker from './features/shipping-label-maker/ShippingLabelMaker';
-import './App.scss';
 import Header from './core/components/header/Header';
-import Wizard from './core/components/wizard/Wizard';
+import MainWrapper from './AppJss';
 
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div>
      <Header/>
-      <main >
-        <Wizard/>
-      </main>    
+      <MainWrapper >
+        <ShippingLabelMaker/>
+      </MainWrapper>    
     </div>
   );
 }

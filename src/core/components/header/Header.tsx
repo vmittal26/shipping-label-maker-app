@@ -1,10 +1,9 @@
 import React from 'react'
-import './Header.scss';
+import HeaderWrapper from './HeaderJss';
 
 
 export default function Header() {
     return (
-        <div className="Header">
-        </div>
+      <HeaderWrapper/>
     )
 }

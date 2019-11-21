@@ -1,10 +1,14 @@
 import React, {useState} from "react";
+import Wizard from "../../core/components/wizard/Wizard";
+import wizardContext from "../../mockData/wizardContext";
 
 const ShippingLabelMaker: React.FC = () => {
-  const [state, setState] = useState({});
+  const [state, setState] = useState({
+    wizardContext
+  });
   return (
     <div>
-      <p>Shipping Label Maker</p>
+      <Wizard wizardContext={wizardContext}/>
     </div>
   );
 };

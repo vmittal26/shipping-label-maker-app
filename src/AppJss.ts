@@ -1,4 +1,6 @@
-main {
+import styled from "styled-components";
+
+const MainWrapper = styled.div`
   position: relative;
   display: block;
   width: 85%;
@@ -7,4 +9,6 @@ main {
   height: 90vh;
   margin: auto;
   top: 3rem;
-}
+`
+
+export default MainWrapper;
