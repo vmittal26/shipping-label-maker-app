@@ -9,10 +9,7 @@ import { Switch, Route } from 'react-router-dom';
 import ShippingLabel from './core/components/shipping-label/ShippingLabel';
 
 const theme = createMuiTheme({
-  typography: {
-   
-    fontSize: 12,
-  },
+  
   palette: {
     primary: {
       main: '#039be5',
