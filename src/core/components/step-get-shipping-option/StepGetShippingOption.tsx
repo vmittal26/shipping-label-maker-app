@@ -1,7 +1,7 @@
 import React from 'react';
-import PaperStyled from '../../utils/PaperStyledJss';
+import PaperStyled from '../../utils/styled-components/PaperStyledJss';
 import { Typography, Grid, MenuItem } from '@material-ui/core';
-import FormControlStyled from '../../utils/FormControlStyledJss';
+import FormControlStyled from '../../utils/styled-components/FormControlStyledJss';
 import { Field } from 'formik';
 import {  TextField } from 'formik-material-ui';
 import ShippingOption from '../../../constants/ShippingOption';

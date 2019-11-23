@@ -2,8 +2,8 @@ import React from "react";
 import { Grid, StylesProvider, Typography } from "@material-ui/core";
 import { TextField } from "formik-material-ui";
 import { Field } from "formik";
-import PaperStyled from "../../utils/PaperStyledJss";
-import FormControlStyled from "../../utils/FormControlStyledJss";
+import PaperStyled from "../../utils/styled-components/PaperStyledJss";
+import FormControlStyled from "../../utils/styled-components/FormControlStyledJss";
 
 const StepReceiverAddress: React.FC = (props: any) => {
   const { errors, touched } = props;

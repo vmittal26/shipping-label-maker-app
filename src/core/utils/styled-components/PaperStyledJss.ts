@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Paper } from "@material-ui/core";
 
 const PaperStyled = styled(Paper)`
-  padding:4em 5em;
-  height: 35em;
+  position: relative;
+  padding:4em;
   font-size:0.9rem;
   width: 100%;
   margin: 0 auto;
