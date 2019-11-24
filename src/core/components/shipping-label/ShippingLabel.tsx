@@ -1,18 +1,14 @@
 import React from "react";
-import WizardContextType from "../../../model/WizardContextType";
 import ShippingLabelStyled, { ShippingLabelHeaderStyled, ShippingLabelMainStyled, ShippingClientInfoContainerStyled, ShippingClientInfoStyledBox, ShippingRateDescriptionStyled, ShippingDescriptionHeaderRightStyled, ShippingRateContainerStyled } from "./ShippingLabelJss";
 import { TypographyStyled } from "../../utils/styled-components/TypographyStyled";
 import { FlexBarStyled } from "../../utils/styled-components/FlexBarStyled";
-import { Typography, Divider, Box, createMuiTheme } from "@material-ui/core";
+import { Typography, Box, createMuiTheme } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import { ShippingOptionMap } from "../../../constants/ShippingOption";
 import getShippingCost from "../../utils/getShippingCost";
 import Barcode from "../../../assets/images/barcode-product.svg";
 import { Redirect } from "react-router-dom";
 
-type ShippingLabelType = {
-    wizardContext: WizardContextType
-}
 
 const theme = createMuiTheme({
     typography: {
@@ -35,7 +31,7 @@ const ShippingLabel: React.FC = (props: any) => {
                     <FlexBarStyled padding="0.7rem"></FlexBarStyled>
                     <ShippingLabelHeaderStyled>
                         <Typography variant="h4" component="h1">Shipping Label</Typography>
-                        <img src={Barcode} />
+                        <img src={Barcode} alt="BarCode" />
                     </ShippingLabelHeaderStyled>
                     <ShippingLabelMainStyled>
                         <ShippingClientInfoContainerStyled>

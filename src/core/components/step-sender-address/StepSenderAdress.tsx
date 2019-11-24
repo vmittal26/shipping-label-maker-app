@@ -7,7 +7,7 @@ import PaperStyled from "../../utils/styled-components/PaperStyledJss";
 import FormControlStyled from "../../utils/styled-components/FormControlStyledJss";
 
 const StepSenderAdress: React.FC = (props: any) => {
-  const { errors, touched } = props;
+  const { errors } = props;
 
   return (
     <PaperStyled>

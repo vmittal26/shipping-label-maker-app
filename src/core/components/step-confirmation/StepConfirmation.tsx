@@ -1,7 +1,6 @@
 
 import React from 'react';
 import PaperStyled from '../../utils/styled-components/PaperStyledJss';
-import { Typography } from '@material-ui/core';
 import Spinner from '../spinner/Spinner';
 import ErroMessageContainer from '../error-message-container/ErrorMessageContainer';
 import { TypographyStyled } from '../../utils/styled-components/TypographyStyled';

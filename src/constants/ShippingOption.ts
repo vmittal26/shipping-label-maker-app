@@ -23,13 +23,4 @@ export const ShippingOptionMap = (function(){
     }
 })();
 
-const getShippingOptions = (shippingOption:any)=>{
-    
-    return Object.keys(shippingOption).map((key)=>{
-         return {
-             value:shippingOption[key],
-             label:key
-         }
-     });
- }
 export default ShippingOption;

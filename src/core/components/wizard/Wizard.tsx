@@ -42,9 +42,9 @@ const Wizard: React.FC<WizardPropsType> = (props: WizardPropsType) => {
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
+  // const handleReset = () => {
+  //   setActiveStep(0);
+  // };
 
   return (
     <WizardWrapper>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Wizard from "../../core/components/wizard/Wizard";
 import initialWizardContext from "../../mockData/wizardContext";
 import StepSenderAdress from "../../core/components/step-sender-address/StepSenderAdress";
@@ -9,8 +9,6 @@ import StepConfirmation from "../../core/components/step-confirmation/StepConfir
 import isObjectEmpty from "../../core/utils/isObjectEmpty";
 import * as Yup from "yup";
 import WizardContextType from "../../model/WizardContextType";
-import Spinner from "../../core/components/spinner/Spinner";
-import ShippingLabel from "../../core/components/shipping-label/ShippingLabel";
 
 
 //Factory of Content Component 
