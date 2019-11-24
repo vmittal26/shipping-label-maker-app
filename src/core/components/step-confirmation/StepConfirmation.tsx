@@ -4,6 +4,7 @@ import PaperStyled from '../../utils/styled-components/PaperStyledJss';
 import { Typography } from '@material-ui/core';
 import Spinner from '../spinner/Spinner';
 import ErroMessageContainer from '../error-message-container/ErrorMessageContainer';
+import { TypographyStyled } from '../../utils/styled-components/TypographyStyled';
 
 type StepConfirmationType = {
   isFormValid: boolean
@@ -22,7 +23,7 @@ const StepConfirmation: React.FC<StepConfirmationType> = (props: StepConfirmatio
 
   if (!isValidating) {
     stepConfirmation = (<PaperStyled>
-      {isFormValid ? <h4>Valid</h4> : <ErroMessageContainer errorMessage=" Some of the information is incomplete! , Please revist steps to enter missing information" />}
+      {isFormValid ?<TypographyStyled textcolor="green" variant="h5" component="h5">All steps are complete!</TypographyStyled> : <ErroMessageContainer errorMessage=" Some of the information is incomplete! , Please revist steps to enter missing information" />}
     </PaperStyled>)
   }
 

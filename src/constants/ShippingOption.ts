@@ -3,4 +3,33 @@ const ShippingOption:any = {
     priority: 2
 }
 
+export const ShippingOptionMap = (function(){
+
+    let shippinOptionMap:any = null;
+
+    return {
+
+        getShippingOptionMap:function():Map<number,string>{
+            if(!shippinOptionMap){
+                shippinOptionMap = new Map();
+                Object.keys(ShippingOption).forEach((key)=>{
+                    shippinOptionMap.set(ShippingOption[key],key);
+                })
+               return shippinOptionMap;
+            }else{
+                return shippinOptionMap;
+            }
+        }
+    }
+})();
+
+const getShippingOptions = (shippingOption:any)=>{
+    
+    return Object.keys(shippingOption).map((key)=>{
+         return {
+             value:shippingOption[key],
+             label:key
+         }
+     });
+ }
 export default ShippingOption;

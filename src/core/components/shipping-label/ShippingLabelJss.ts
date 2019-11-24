@@ -1,5 +1,4 @@
 import styled, { StyledComponent } from "styled-components";
-import { Typography } from "@material-ui/core";
 
 const ShippingLabelStyled = styled.div`
     border:1px solid #ccc;
@@ -8,21 +7,17 @@ const ShippingLabelStyled = styled.div`
     padding:0;
 `;
 
-export const FlexBarStyled: StyledComponent<any, any> = styled.div`
-    background-color:${({bgcolor="rgb(51,51,51)"}: any) => bgcolor};
-    width:100%;
-    padding:${(props: any) => props.padding};
-    display:flex;
-    justify-content:space-between;
-    
-`
-
 export const ShippingLabelHeaderStyled = styled.div`
     display:flex;
     width:100%;
     padding:1em 4em;
     padding-bottom:0em;
     justify-content:space-between;
+
+    img{
+        width:4rem;
+        height:4rem;
+    }
     
 `
 
@@ -47,11 +42,6 @@ export const ShippingClientInfoStyledBox = styled.div`
         padding-bottom:0.8em;
     }
 `
-export const TypographyStyled: StyledComponent<any, any> = styled(Typography)`
-   color:${(props: any) => props.textcolor};
-`
-
-
 export const ShippingRateDescriptionStyled = styled.div`
     text-transform:uppercase;
     display:flex;
@@ -63,7 +53,7 @@ export const ShippingRateDescriptionStyled = styled.div`
 export const ShippingDescriptionHeaderRightStyled = styled.div`
   display:flex;
   justify-content:space-between;
-  flex-basis:20%;
+  flex-basis:35%;
 `
 
 export const ShippingRateContainerStyled:StyledComponent<any, any> = styled.div`

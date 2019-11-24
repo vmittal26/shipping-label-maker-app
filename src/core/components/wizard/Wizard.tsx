@@ -35,7 +35,7 @@ const Wizard: React.FC<WizardPropsType> = (props: WizardPropsType) => {
 
   const handleBack = (props: any) => {
     let { setTouched, errors, submitForm } = props;
-    if (activeStep === steps.length - 2) {
+    if (activeStep === steps.length - 1) {
       setTouched();
       if (!isObjectEmpty(errors)) submitForm();
     }
@@ -49,7 +49,7 @@ const Wizard: React.FC<WizardPropsType> = (props: WizardPropsType) => {
   return (
     <WizardWrapper>
       <Formik
-        // enableReinitialize
+        enableReinitialize
         initialValues={wizardContext}
         onSubmit={(wizardContext:WizardContextType) => {
           onComplete(wizardContext);

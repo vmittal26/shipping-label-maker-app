@@ -8,6 +8,7 @@ import { Field } from 'formik';
 
 const StepGetWeight: React.FC = (props: any) => {
 
+    const {errors , touched} = props;
     return (
         <PaperStyled>
             <Typography variant="h6">Enter Weight of Shipment</Typography>
@@ -15,9 +16,10 @@ const StepGetWeight: React.FC = (props: any) => {
                 <Grid item sm={5}>
                     <FormControlStyled>
                         <Field
+                            required
+                            error={touched && touched.weight && errors && errors.weight}
                             name="weight"
-                            label="Weight"
-                            type="text"
+                            label="Weight (KG)"
                             component={TextField}
                         />
                     </FormControlStyled>

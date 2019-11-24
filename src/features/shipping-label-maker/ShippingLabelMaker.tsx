@@ -49,7 +49,8 @@ const validationSchema = Yup.object().shape({
     street: Yup.string().required(`Please Enter Street`),
     zip: Yup.number().typeError("Must be number").required(`Please enter zip`),
     city: Yup.string().required(`Please enter City`),
-    state: Yup.string().required(`Please enter state`)
+    state: Yup.string().required(`Please enter state`),
+
   }),
   to: Yup.object().shape({
     name: Yup.string().required(`Please Enter Sender's Name`),
@@ -58,49 +59,29 @@ const validationSchema = Yup.object().shape({
     city: Yup.string().required(`Please enter City`),
     state: Yup.string().required(`Please enter state`)
   }),
+  weight: Yup.number().moreThan(0, "Must be more than 0 KG").max(200, "Maximum weight allowed 200 KG").typeError("Must be number").required(`Please enter weight`),
 })
 
-const ShippingLabelMaker: React.FC = () => {
-  const [isGeneratingShippingLabel, setIsGeneratingShippingLabel] = useState<boolean>(false);
+const ShippingLabelMaker: React.FC = (props: any) => {
 
-  const [state, setState] = useState({
-    isWizardComplete: false,
-    wizardContext: initialWizardContext
-  });
+  const { history } = props;
 
-  const { isWizardComplete, wizardContext } = state;
   const onComplete = (wizardContext: WizardContextType) => {
-
-    setIsGeneratingShippingLabel(true);
-    setTimeout(() => {
-      setIsGeneratingShippingLabel(false);
-      setState({
-        isWizardComplete: true,
-        wizardContext
-      })
-    }, 1000);
+    history.push("/shippingLabel", {
+      wizardContext,
+      isWizardComplete:true
+    });
   }
 
-  let spinner = <Spinner />
-
-  let wizard = (
+  let shippingLabelMaker = (
     <Wizard
-      wizardContext={wizardContext}
+      wizardContext={initialWizardContext}
       steps={getSteps()}
       onComplete={onComplete}
       getStepContent={getStepContent}
       validationSchema={validationSchema} />
 
   );
-  let shippingLabelMaker = null;
-
-  if (isGeneratingShippingLabel) {
-    shippingLabelMaker = <>{spinner}{wizard}</>;
-  } else if (isWizardComplete) {
-    shippingLabelMaker = <ShippingLabel wizardContext={wizardContext} />;
-  } else {
-    shippingLabelMaker = wizard;
-  }
 
   return shippingLabelMaker;
 

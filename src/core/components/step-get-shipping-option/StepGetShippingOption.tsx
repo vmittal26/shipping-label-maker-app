@@ -25,7 +25,6 @@ const StepGetShippingOption: React.FC = (props: any) => {
                 <Grid item sm={5}>
                     <FormControlStyled>
                         <Field
-                            type="text"
                             name="shippingOption"
                             label="Select Shipping Option"
                             select

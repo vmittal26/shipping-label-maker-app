@@ -7,7 +7,15 @@ const HeaderWrapper = styled.div`
      width:100%;
      align-self: center;
      height: 2.5rem;
+     align-items:center;
      z-index:1;
+     padding:0.5em;
+
+     img{
+          width:2rem;
+          cursor: pointer;
+          height:2rem;
+     }
 `
 
 export default HeaderWrapper;

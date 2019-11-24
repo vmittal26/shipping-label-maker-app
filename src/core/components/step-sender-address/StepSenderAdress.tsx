@@ -20,7 +20,6 @@ const StepSenderAdress: React.FC = (props: any) => {
               error={errors.from && errors.from.name}
               name="from.name"
               label="Name"
-              type="text"
               component={TextField}
             />
           </FormControlStyled>
@@ -33,7 +32,6 @@ const StepSenderAdress: React.FC = (props: any) => {
                 error={errors.from && errors.from.street}
                 name="from.street"
                 label="Street"
-                type="text"
                 component={TextField}
               />
             </FormControlStyled>
@@ -46,7 +44,6 @@ const StepSenderAdress: React.FC = (props: any) => {
                   error={ errors.from && errors.from.state}
                   name="from.state"
                   label="State"
-                  type="text"
                   component={TextField}
                 />
               </FormControlStyled>
@@ -58,7 +55,6 @@ const StepSenderAdress: React.FC = (props: any) => {
                   error={errors.from && errors.from.city}
                   name="from.city"
                   label="City"
-                  type="text"
                   component={TextField}
                 />
               </FormControlStyled>

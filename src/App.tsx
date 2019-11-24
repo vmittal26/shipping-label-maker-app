@@ -9,7 +9,6 @@ import { Switch, Route } from 'react-router-dom';
 import ShippingLabel from './core/components/shipping-label/ShippingLabel';
 
 const theme = createMuiTheme({
-  
   palette: {
     primary: {
       main: '#039be5',
