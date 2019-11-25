@@ -5,7 +5,6 @@ const HeaderWrapper = styled.div`
      display: flex;
      position:fixed;
      width:100%;
-     align-self: center;
      height: 2.5rem;
      align-items:center;
      z-index:1;

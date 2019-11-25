@@ -5,7 +5,7 @@ import { TypographyStyled } from '../../utils/styled-components/TypographyStyled
 import { Link } from 'react-router-dom';
 
 
-export default function Header() {
+const Header = ()=> {
   return (
     <HeaderWrapper>
       <Link to="/"> <img src={ShippingMaker} alt="Shipping Service" /></Link>
@@ -13,3 +13,5 @@ export default function Header() {
     </HeaderWrapper>
   )
 }
+
+export default Header;

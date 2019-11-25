@@ -2,11 +2,11 @@ import WizardContextType from "../model/WizardContextType";
 
 const wizardContext:WizardContextType = {
     from: {
-        name: "Vaibhav",
-        street: "Sector -77 , North Eye",
-        city: "",
-        state: "",
-        zip: ""
+        name: "James Anderson",
+        street: "20th Avenue , Parker Road",
+        city: "Seattle",
+        state: "Texas",
+        zip: "21022"
     },
     to: {
         name: "",
@@ -15,7 +15,7 @@ const wizardContext:WizardContextType = {
         state: "",
         zip: ""
     },
-    weight: 0,
+    weight: 10,
     shippingOption: 1
 }
 

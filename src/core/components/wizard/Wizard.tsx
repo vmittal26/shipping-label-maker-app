@@ -90,7 +90,7 @@ const Wizard: React.FC<WizardPropsType> = (props: WizardPropsType) => {
                   color="primary"
                   style={activeStep < steps.length - 1 ? { display: "none" } : { display: "block" }}
                 >
-                  Confirm
+                  Generate Shipping Label
                   </Button>
               </ButtonContainerStyled>
 
